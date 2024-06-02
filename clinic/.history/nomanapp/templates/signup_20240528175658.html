@@ -1,0 +1,18 @@
+{% extends 'nomanapp/home.html'%}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>        
+
+
+ {% block %}  

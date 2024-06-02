@@ -1,0 +1,103 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      background-color: #007bff;
+      border-radius: 5px;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-title {
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .appointment-title:hover {
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+
+    .appointment-details {
+      display: none;
+      padding: 10px;
+      border-left: 5px solid #007bff;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .appointment-details.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% if appointments %}
+      {% for appointment in appointments %}
+        <div class="appointment">
+          <div class="appointment-title" onclick="toggleDetails(this)">Appointment {{ forloop.counter }}</div>
+          <div class="appointment-details">
+            <p><strong>Name:</strong> {{ appointment.name }}</p>
+            <p><strong>Date:</strong> {{ appointment.date }}</p>
+            <p><strong>Time:</strong> {{ appointment.time }}</p>
+            <p><strong>Department:</strong> {{ appointment.department }}</p>
+            <p><strong>Message:</strong> {{ appointment.message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No appointments booked.</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function toggleDetails(element) {
+      var details = element.nextElementSibling;
+      details.classList.toggle("active");
+    }
+  </script>
+{% endblock %}

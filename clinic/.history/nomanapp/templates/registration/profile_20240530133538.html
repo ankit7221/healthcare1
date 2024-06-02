@@ -1,0 +1,66 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <style>
+    .appointment-title {
+      cursor: pointer; /* Change cursor to pointer on hover */
+      transition: color 0.3s ease; /* Smooth transition for color change */
+    }
+
+    .appointment-title:hover {
+      color: #007bff; /* Change color on hover */
+    }
+
+    .appointment-details {
+      display: none; /* Hide details by default */
+    }
+
+    .appointment-details.active {
+      display: block; /* Show details when active */
+      animation: fadeIn 0.5s ease; /* Fade in animation */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Start with opacity 0 */
+      }
+      to {
+        opacity: 1; /* Fade in to opacity 1 */
+      }
+    }
+  </style>
+
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% if appointments %}
+      {% for appointment in appointments %}
+        <div class="appointment">
+          <h3 class="appointment-title" onclick="toggleDetails(this)">Appointment {{ forloop.counter }}</h3>
+          <div class="appointment-details">
+            <p>Name: {{ appointment.name }}</p>
+            <p>Email: {{ appointment.email }}</p>
+            <p>Date: {{ appointment.date }}</p>
+            <p>Time: {{ appointment.time }}</p>
+            <p>Department: {{ appointment.department }}</p>
+            <p>Message: {{ appointment.message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No appointments booked.</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function toggleDetails(element) {
+      var details = element.nextElementSibling;
+      details.classList.toggle("active"); /* Toggle 'active' class on details */
+    }
+  </script>
+{% endblock %}

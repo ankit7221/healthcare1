@@ -1,0 +1,16 @@
+{% extends "home.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome, {{ user.username }}!</h1>
+    <img src="{{ user.profile.profile_picture.url }}" alt="{{ user.username }}'s profile picture" class="rounded-circle" style="width: 150px; height: 150px;">
+    <p>Email: {{ user.email }}</p>
+
+    <h2>Your Appointments</h2>
+    <ul>
+        {% for appointment in user_appointments %}
+            <li>{{ appointment.details }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

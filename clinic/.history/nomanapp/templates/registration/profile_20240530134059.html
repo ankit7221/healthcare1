@@ -1,0 +1,81 @@
+{% block content %}
+  <style>
+    /* CSS for h2 headings */
+    h2 {
+      font-size: 24px; /* Increase font size */
+      color: #ffffff; /* Change text color to white */
+      margin-bottom: 20px; /* Add some bottom margin */
+      text-transform: uppercase; /* Convert text to uppercase */
+      border: 2px solid #007bff; /* Add border with blue color */
+      padding: 10px 15px; /* Add padding */
+      display: inline-block; /* Ensure the border wraps around the content */
+      background-color: #007bff; /* Fill the box with blue color */
+    }
+
+    /* CSS for appointment blocks */
+    .appointment {
+      margin-bottom: 20px; /* Add space between appointment blocks */
+    }
+
+    .appointment-title {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .appointment-title:hover {
+      transform: scale(1.1);
+    }
+
+    .appointment-details {
+      display: none;
+    }
+
+    .appointment-details.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% if appointments %}
+      {% for appointment in appointments %}
+        <div class="appointment">
+          <h3 class="appointment-title" onclick="toggleDetails(this)">Appointment {{ forloop.counter }}</h3>
+          <div class="appointment-details">
+            <p>Name: {{ appointment.name }}</p>
+            <p>Email: {{ appointment.email }}</p>
+            <p>Date: {{ appointment.date }}</p>
+            <p>Time: {{ appointment.time }}</p>
+            <p>Department: {{ appointment.department }}</p>
+            <p>Message: {{ appointment.message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No appointments booked.</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function toggleDetails(element) {
+      var details = element.nextElementSibling;
+      details.classList.toggle("active");
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- templates/registration/profile.html -->
+{% extends "home.html" %}
+
+{% block content %}
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <style>
+    /* CSS for h2 headings */
+    h2 {
+      font-size: 24px; /* Increase font size */
+      color: #333; /* Change text color */
+      margin-bottom: 20px; /* Add some bottom margin */
+      text-transform: uppercase; /* Convert text to uppercase */
+      border-bottom: 2px solid #ccc; /* Add bottom border */
+      padding-bottom: 5px; /* Add padding to bottom */
+    }
+
+    .appointment-title {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .appointment-title:hover {
+      transform: scale(1.1);
+    }
+
+    .appointment-details {
+      display: none;
+    }
+
+    .appointment-details.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% if appointments %}
+      {% for appointment in appointments %}
+        <div class="appointment">
+          <h3 class="appointment-title" onclick="toggleDetails(this)">Appointment {{ forloop.counter }}</h3>
+          <div class="appointment-details">
+            <p>Name: {{ appointment.name }}</p>
+            <p>Email: {{ appointment.email }}</p>
+            <p>Date: {{ appointment.date }}</p>
+            <p>Time: {{ appointment.time }}</p>
+            <p>Department: {{ appointment.department }}</p>
+            <p>Message: {{ appointment.message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No appointments booked.</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function toggleDetails(element) {
+      var details = element.nextElementSibling;
+      details.classList.toggle("active");
+    }
+  </script>
+{% endblock %}

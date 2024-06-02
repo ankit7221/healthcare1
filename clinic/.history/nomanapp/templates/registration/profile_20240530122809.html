@@ -1,0 +1,23 @@
+<!-- templates/registration/profile.html -->
+{% extends "home.html" %}
+
+{% block content %}
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% for appointment in make_appointment %}
+      <div class="appointment">
+        <p>Date: {{ appointment.date }}</p>
+        <p>Time: {{ appointment.time }}</p>
+        <!-- Display other appointment details -->
+      </div>
+    {% empty %}
+      <p>No appointments booked.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

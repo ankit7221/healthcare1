@@ -1,0 +1,448 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DentaCare - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'nomanapp/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'nomanapp/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'nomanapp/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'nomanapp/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'nomanapp/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/jquery.timepicker.css' %}">
+
+    
+    <link rel="stylesheet" href="{% static 'nomanapp/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'nomanapp/css/style.css' %}">
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="home.html">Denta<span>Care</span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="doctors.html" class="nav-link">Doctors</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Make an Appointment</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url({% static 'nomanapp/images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <p class="breadcrumbs" data-scrollax=" properties: { translateY: '70%', opacity: 1.6}"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-md-flex">
+	    		<div class="col-md-6 ftco-animate img about-image order-md-last" style="background-image: url({% static 'nomanapp/images/about.jpg' %});">
+	    		</div>
+	    		<div class="col-md-6 ftco-animate pr-md-5 order-md-first">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-whatwedo-tab" data-toggle="pill" href="#v-pills-whatwedo" role="tab" aria-controls="v-pills-whatwedo" aria-selected="true">What we do</a>
+
+		              <a class="nav-link" id="v-pills-mission-tab" data-toggle="pill" href="#v-pills-mission" role="tab" aria-controls="v-pills-mission" aria-selected="false">Our mission</a>
+
+		              <a class="nav-link" id="v-pills-goal-tab" data-toggle="pill" href="#v-pills-goal" role="tab" aria-controls="v-pills-goal" aria-selected="false">Our goal</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+		            
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-whatwedo" role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
+		              	<div>
+			                <h2 class="mb-4">We Offer High Quality Services</h2>
+			              	<p>At Dentacare, we pride ourselves on delivering exceptional dental care through advanced procedures and high-quality services. Our team of experienced professionals is dedicated to providing personalized treatments that ensure optimal dental health and a beautiful smile.</p>
+                      <p>We offer comprehensive dental exams, professional teeth cleaning, and advanced cosmetic dentistry services to meet the unique needs of our patients.</p>
+				            </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
+		                <div>
+			                <h2 class="mb-4">To Accomodate All Patients</h2>
+			              	<p>At Dentacare, our mission is to accommodate all patients by providing high-quality dental care in a comfortable and welcoming environment. We believe that everyone deserves access to exceptional dental services, and we strive to make our clinics accessible to all.</p>
+                      <p>Our team is committed to ensuring that every patient receives the care and attention they need to maintain optimal dental health and achieve a beautiful smile.</p>
+                    </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
+		                <div>
+			                <h2 class="mb-4">Help Our Customers Needs</h2>
+                      <p>At Dentacare, we are dedicated to helping our customers' needs by providing personalized dental care solutions tailored to their individual requirements. Whether it's preventive dental care, restorative treatments, or cosmetic procedures, our goal is to ensure that each patient receives the attention and care they deserve.</p>
+                      <p>We understand that every patient is unique, which is why we take the time to listen to their concerns and develop customized treatment plans to address their specific dental issues. Our team of skilled professionals is committed to delivering exceptional service and helping our customers achieve optimal oral health and a confident smile.</p>
+                    </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section-2">
+    	<div class="container-wrap">
+      	<div class="row d-flex no-gutters">
+      		<div class="col-md-6 img" style="background-image: url({% static 'nomanapp/images/about-2.jpg' %});">
+      		</div>
+      		<div class="col-md-6 d-flex">
+      			<div class="about-wrap">
+      				<div class="heading-section heading-section-white mb-5 ftco-animate">
+		            <h2 class="mb-2">Dentacare with a personal touch</h2>
+		            <p>At Dentacare, we believe in providing dental services with a personal touch. Our approach to patient care goes beyond routine procedures; we strive to create meaningful connections with our patients and make them feel comfortable and valued throughout their dental journey.</p>
+              </div>
+      				<div class="list-services d-flex ftco-animate">
+      					<div class="icon d-flex justify-content-center align-items-center">
+      						<span class="icon-check2"></span>
+      					</div>
+      					<div class="text">
+	      					<h3>Well Experience Dentist</h3>
+	      					<p>Our team of well-experienced dentists is dedicated to delivering high-quality dental care services tailored to meet the unique needs of each patient. With years of expertise and a commitment to ongoing education, our dentists ensure that every patient receives comprehensive and personalized treatment.</p>
+                </div>
+      				</div>
+      				<div class="list-services d-flex ftco-animate">
+      					<div class="icon d-flex justify-content-center align-items-center">
+      						<span class="icon-check2"></span>
+      					</div>
+      					<div class="text">
+	      					<h3>High Technology Facilities</h3>
+	      					<p>At Dentacare, we incorporate the latest advancements in dental technology to provide our patients with the highest quality of care. From digital imaging systems to state-of-the-art equipment, our advanced facilities ensure precise diagnostics and efficient treatment procedures.</p>
+                </div>
+      				</div>
+      				<div class="list-services d-flex ftco-animate">
+      					<div class="icon d-flex justify-content-center align-items-center">
+      						<span class="icon-check2"></span>
+      					</div>
+      					<div class="text">
+	      					<h3>Comfortable Clinics</h3>
+	      					<p>We understand the importance of a comfortable and welcoming environment in enhancing the overall patient experience. Our clinics are designed to create a relaxing atmosphere where patients feel at ease during their visits. From cozy waiting areas to well-appointed treatment rooms, we prioritize patient comfort at every step.</p>
+                </div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+    </section>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-2">Testimony</h2>
+            <span class="subheading">Our Happy Customer Says</span>
+          </div>
+        </div>
+        <div class="row justify-content-center ftco-animate">
+          <div class="col-md-8">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'nomanapp/images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5">I had a wonderful experience at Dentacare. The staff was incredibly friendly and the dentist took great care of my teeth. I highly recommend their services!</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'nomanapp/images/person_2.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5">I had a wonderful experience at Dentacare. The staff was incredibly friendly and the dentist took great care of my teeth. I highly recommend their services!</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'nomanapp/images/person_3.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5">The team at Dentacare made my experience truly exceptional. The care and professionalism were outstanding, and my smile has never looked better. I highly recommend their services!</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'nomanapp/images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5">The care I received at Dentacare was top-notch. The staff was attentive and the dentist explained everything clearly. I'm very happy with the results and would highly recommend their services to anyone!</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url({% static 'nomanapp/images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5">The care I received at Dentacare was top-notch. The staff was attentive and the dentist explained everything clearly. I'm very happy with the results and would highly recommend their services to anyone!</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'nomanapp/images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row d-flex align-items-center">
+    			<div class="col-md-3 aside-stretch py-5">
+    				<div class="heading-section heading-section-white ftco-animate pr-md-4">
+              <h2 class="mb-3">Our Achievements</h2>
+              <p>At Dentacare, we take pride in our accomplishments and the recognition we've received for our commitment to excellence in dental care. Through our dedication to patient satisfaction and clinical expertise, we've achieved significant milestones that reflect our mission to provide the highest quality of service.</p>
+          </div>
+          
+    			<div class="col-md-9 py-5 pl-md-5">
+		    		<div class="row">
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="14">0</strong>
+		                <span>Years of Experience</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="4500">0</strong>
+		                <span>Qualified Dentist</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="4200">0</strong>
+		                <span>Happy Smiling Customer</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="320">0</strong>
+		                <span>Patients Per Year</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+	      </div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">DentaCare</h2>
+              <p>At DentaCare, we are committed to providing exceptional dental care services tailored to meet the unique needs of our patients. Our experienced team is dedicated to ensuring your oral health and well-being.</p>
+          </div>
+          
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft ">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="services.html" class="py-2 d-block">Services</a></li>
+                <li><a href="Doctors.html" class="py-2 d-block">Doctors</a></li>
+                <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 pr-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url({% static 'nomanapp/images/image_1.jpg' %});"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url({% static 'nomanapp/images/image_2.jpg'%});"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Office</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Jaipur Rajasthan(India)</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+919929488967</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ankitchoudhary2451@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+ <!-- Modal -->
+ <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalRequestLabel">Make an Appointment</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form method="post" action="{% url 'make_appointment' %}">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="date" class="form-control" name="date" placeholder="Date" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="time" class="form-control" name="time" placeholder="Time" required>
+                  </div>
+                  <div class="form-group">
+                      <div class="select-wrap">
+                          <div class="icon"></div>
+                          <select name="department" class="form-control" required>
+                              <option value="">Department</option>
+                              <option value="Teeth Whitening">Teeth Whitening</option>
+                              <option value="Teeth Cleaning">Teeth Cleaning</option>
+                              <option value="Quality Brackets">Quality Brackets</option>
+                              <option value="Modern Anesthetic">Modern Anesthetic</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" value="Make Appointment" class="btn btn-primary">
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <script src="{% static 'nomanapp/js/jquery.min.js'%}"></script>
+  <script src="{% static 'nomanapp/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/popper.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/aos.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'nomanapp/js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'nomanapp/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'nomanapp/js/google-map.js' %}"></script>
+  <script src="{% static 'nomanapp/js/main.js' %}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>{{ user.username }}'s Profile</h1>
+    <img src="{{ profile.profile_photo.url }}" alt="Profile Photo" class="img-thumbnail" style="width: 150px; height: 150px;">
+    <h2>Appointments</h2>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{ appointment.date }} at {{ appointment.time }} - {{ appointment.department }}</li>
+        {% empty %}
+            <li>You have no appointments.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

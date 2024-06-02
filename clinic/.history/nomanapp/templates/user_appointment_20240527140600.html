@@ -1,0 +1,16 @@
+<!-- templates/user_appointments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Appointments</title>
+</head>
+<body>
+    <h2>Your Appointments</h2>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{ appointment.date }} - {{ appointment.department }} - {{ appointment.message }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

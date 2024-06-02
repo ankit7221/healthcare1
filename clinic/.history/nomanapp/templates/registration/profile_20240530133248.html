@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <div class="container my-4">
+    <h2>Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+  </div>
+
+  <div class="container my-4">
+    <h2>Appointments</h2>
+    {% for appointment in appointments %}
+      <div class="appointment">
+        <p>Name: {{ appointment.name }}</p>
+        <p>Email: {{ appointment.email }}</p>
+        <p>Date: {{ appointment.date }}</p>
+        <p>Time: {{ appointment.time }}</p>
+        <p>Department: {{ appointment.department }}</p>
+        <p>Message: {{ appointment.message }}</p>
+      </div>
+    {% empty %}
+      <p>No appointments booked.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  .profile-card {
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .profile-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-info {
+    padding: 20px;
+  }
+
+  .profile-info h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .profile-info p {
+    margin: 5px 0;
+    color: #666666;
+  }
+
+  .profile-info .btn {
+    margin-top: 15px;
+  }
+
+  .appointment-card {
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .appointment-title {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .appointment-title:hover {
+    background-color: #0056b3;
+  }
+
+  .appointment-details {
+    display: none;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .appointment-details.active {
+    display: block;
+  }
+</style>
+
+<div class="profile-card">
+  <img src="{% if user.profile_image %}{{ user.profile_image.url }}{% else %}https://via.placeholder.com/900x300{% endif %}" alt="Profile Image">
+  <div class="profile-info text-center">
+    <h2>{{ request.user.username }}</h2>
+    <p>Email: {{ request.user.email }}</p>
+    <p>Age: {{ request.user.profile.age }}</p>
+    <p>Address: {{ request.user.profile.address }}</p>
+    <p>Phone: {{ request.user.profile.phone }}</p>
+    <p>Freelance: {{ request.user.profile.freelance_status }}</p>
+    <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+  </div>
+</div>
+
+<div class="appointment-card">
+  <h2 class="text-center">Appointments</h2>
+  {% if appointments %}
+    {% for appointment in appointments %}
+      <div>
+        <div class="appointment-title" onclick="toggleDetails(this)">Appointment {{ forloop.counter }}</div>
+        <div class="appointment-details">
+          {% if appointment.image %}
+            <img src="{{ appointment.image.url }}" alt="Appointment Image" class="img-fluid">
+          {% endif %}
+          <p><strong>Name:</strong> {{ appointment.name }}</p>
+          <p><strong>Date:</strong> {{ appointment.date }}</p>
+          <p><strong>Time:</strong> {{ appointment.time }}</p>
+          <p><strong>Department:</strong> {{ appointment.department }}</p>
+          <p><strong>Message:</strong> {{ appointment.message }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="text-center">No appointments booked.</p>
+  {% endif %}
+</div>
+
+<script>
+  function toggleDetails(element) {
+    var details = element.nextElementSibling;
+    details.classList.toggle("active");
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- profile.html -->
+{% for appointment in appointments %}
+  <div class="appointment">
+    <p>Date: {{ appointment.date }}</p>
+    <p>Time: {{ appointment.time }}</p>
+    <!-- Display other appointment details -->
+  </div>
+{% empty %}
+  <p>No appointments booked.</p>
+{% endfor %}
