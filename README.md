@@ -39,7 +39,7 @@ How to run project
 
 Home page  
 
-![Screenshot of a comment on a GitHub issue showing an image.](https://github.com/mukesh567/noteProject/blob/master/assets/loginsignup.png)  
+![Screenshot of a comment on a GitHub issue showing an image.](https://github.com/ankit7221/healthcare1/blob/master/assets/home%20page.png)
 
 
      
