@@ -37,6 +37,10 @@ How to run project
 
 ## Screenshots  
 
+Home page  
+
+![Screenshot of a comment on a GitHub issue showing an image.]( https://github.com/mukesh567/noteProject/blob/master/assets/loginsignup.png)   
+
 
      
 
