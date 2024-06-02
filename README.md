@@ -69,7 +69,7 @@ Contact page
 
 Profile page  
 
-![Screenshot of a comment on a GitHub issue showing an image.](https://github.com/ankit7221/healthcare1/blob/master/assets/userprofile%20page.png)   
+![Screenshot of a comment on a GitHub issue showing an image.](https://github.com/ankit7221/healthcare1/blob/master/assets/user%20profile%20page.png)   
 
 
 Doctors page  
